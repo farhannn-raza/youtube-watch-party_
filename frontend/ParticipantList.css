@@ -1,0 +1,134 @@
+.plist {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--surface);
+  border-left: 1px solid var(--border);
+}
+
+.plist__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.plist__title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.plist__count {
+  background: var(--surface2);
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+.plist__items {
+  list-style: none;
+  overflow-y: auto;
+  flex: 1;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.plist__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  border-radius: var(--radius);
+  transition: background 0.1s;
+  position: relative;
+}
+
+.plist__item:hover {
+  background: var(--surface2);
+}
+
+.plist__info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.plist__name {
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.plist__you {
+  color: var(--text-muted);
+  font-weight: 400;
+  font-size: 11px;
+}
+
+.plist__actions {
+  position: relative;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+.plist__action-btn {
+  background: none;
+  color: var(--text-muted);
+  font-size: 18px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  line-height: 1;
+}
+
+.plist__action-btn:hover {
+  background: var(--border);
+  color: var(--text);
+}
+
+.plist__menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  min-width: 160px;
+  z-index: 100;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  animation: fadeIn 0.15s ease;
+}
+
+.plist__menu button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  color: var(--text);
+  padding: 9px 14px;
+  font-size: 12px;
+  font-family: var(--font-display);
+}
+
+.plist__menu button:hover {
+  background: var(--border);
+}
+
+.plist__menu button.danger {
+  color: var(--danger);
+}
+
+.plist__menu button.danger:hover {
+  background: rgba(255, 71, 71, 0.1);
+}
