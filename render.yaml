@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: watchparty-backend
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 3001
+      - key: FRONTEND_URL
+        sync: false   # set manually to your Vercel URL after deploy
